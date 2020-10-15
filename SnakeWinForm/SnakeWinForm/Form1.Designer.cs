@@ -32,7 +32,6 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.prizeLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.stopButton = new System.Windows.Forms.Button();
             this.lifeLabel = new System.Windows.Forms.Label();
             this.scoreLabel = new System.Windows.Forms.Label();
@@ -71,9 +70,9 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.SkyBlue;
             this.splitContainer1.Panel1.Controls.Add(this.prizeLabel);
             this.splitContainer1.Panel1.Controls.Add(this.label4);
-            this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.stopButton);
             this.splitContainer1.Panel1.Controls.Add(this.lifeLabel);
             this.splitContainer1.Panel1.Controls.Add(this.scoreLabel);
@@ -95,7 +94,7 @@
             // 
             this.prizeLabel.AutoSize = true;
             this.prizeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.prizeLabel.ForeColor = System.Drawing.Color.Maroon;
+            this.prizeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.prizeLabel.Location = new System.Drawing.Point(74, 300);
             this.prizeLabel.Name = "prizeLabel";
             this.prizeLabel.Size = new System.Drawing.Size(0, 20);
@@ -110,15 +109,6 @@
             this.label4.Size = new System.Drawing.Size(54, 20);
             this.label4.TabIndex = 15;
             this.label4.Text = "Prize:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "label3";
             // 
             // stopButton
             // 
@@ -350,7 +340,6 @@
         private System.Windows.Forms.Button stopButton;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label prizeLabel;
     }
 }
