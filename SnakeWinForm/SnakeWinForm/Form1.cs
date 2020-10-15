@@ -16,7 +16,7 @@ namespace SnakeWinForm
         public Graphics graphics;
         static bool gameModePrize = false;
 
-        private int CurrentMapNumber = 1;
+        private int CurrentMapNumber = 0;
         private int score = 0;
         private int life = 0;
         private int nextLevel = 120;
@@ -39,15 +39,17 @@ namespace SnakeWinForm
         private void StartGame()
         {
             map = new Map(CurrentMapNumber);
+            if (withPrizesRadioButton.Checked) { gameModePrize = true; }
+            else { gameModePrize = false; }
+
             snake = new Snake(map.HeightMap, map.WidthMap, map.CurrentMapBarrier, gameModePrize);
             control = new Control();
+            control.Input("Right");
             pictureBox.Image = new Bitmap(Self.pictureBox.Width, Self.pictureBox.Height);
             graphics = Graphics.FromImage(pictureBox.Image);
             snake.Life = life;
             snake.Score = score;
 
-            if (withPrizesRadioButton.Checked) gameModePrize = true;
-            else gameModePrize = false;
 
             if (easyRadioButton.Checked) timer1.Interval = 150;
             if (mediumRadioButton.Checked) timer1.Interval = 100;
@@ -94,7 +96,7 @@ namespace SnakeWinForm
                 CurrentMapNumber++;
                 if (CurrentMapNumber == 4)
                 {
-                    CurrentMapNumber = 1;
+                    CurrentMapNumber = 0;
                 }
                 StartGame();
             }
@@ -112,7 +114,7 @@ namespace SnakeWinForm
             stopButton.Enabled = false;
             graphics.Clear(Color.Gray);
             pictureBox.Refresh();
-            CurrentMapNumber = 1;
+            CurrentMapNumber = 0;
             score = 0;
             life = 0;
             nextLevel = 120;
@@ -175,6 +177,7 @@ namespace SnakeWinForm
             GameOver();
             scoreLabel.Text = snake.Score.ToString();
             lifeLabel.Text = snake.Life.ToString();
+            prizeLabel.Text = snake.StepToAccessPrize.ToString();
 
         }
 

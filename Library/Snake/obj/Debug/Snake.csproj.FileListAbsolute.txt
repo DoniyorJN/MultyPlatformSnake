@@ -1,6 +1,0 @@
-C:\Users\Zver\source\Refactoring\ConsoleSnake\Snake\bin\Debug\Snake.dll
-C:\Users\Zver\source\Refactoring\ConsoleSnake\Snake\bin\Debug\Snake.pdb
-C:\Users\Zver\source\Refactoring\ConsoleSnake\Snake\obj\Debug\Snake.csprojAssemblyReference.cache
-C:\Users\Zver\source\Refactoring\ConsoleSnake\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
-C:\Users\Zver\source\Refactoring\ConsoleSnake\Snake\obj\Debug\Snake.dll
-C:\Users\Zver\source\Refactoring\ConsoleSnake\Snake\obj\Debug\Snake.pdb

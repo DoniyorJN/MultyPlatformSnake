@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.prizeLabel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.stopButton = new System.Windows.Forms.Button();
             this.lifeLabel = new System.Windows.Forms.Label();
             this.scoreLabel = new System.Windows.Forms.Label();
@@ -68,6 +71,9 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.prizeLabel);
+            this.splitContainer1.Panel1.Controls.Add(this.label4);
+            this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.stopButton);
             this.splitContainer1.Panel1.Controls.Add(this.lifeLabel);
             this.splitContainer1.Panel1.Controls.Add(this.scoreLabel);
@@ -85,6 +91,35 @@
             this.splitContainer1.SplitterDistance = 121;
             this.splitContainer1.TabIndex = 0;
             // 
+            // prizeLabel
+            // 
+            this.prizeLabel.AutoSize = true;
+            this.prizeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.prizeLabel.ForeColor = System.Drawing.Color.Maroon;
+            this.prizeLabel.Location = new System.Drawing.Point(74, 300);
+            this.prizeLabel.Name = "prizeLabel";
+            this.prizeLabel.Size = new System.Drawing.Size(0, 20);
+            this.prizeLabel.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(16, 300);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 20);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Prize:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "label3";
+            // 
             // stopButton
             // 
             this.stopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -101,7 +136,7 @@
             this.lifeLabel.AutoSize = true;
             this.lifeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lifeLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.lifeLabel.Location = new System.Drawing.Point(76, 284);
+            this.lifeLabel.Location = new System.Drawing.Point(74, 268);
             this.lifeLabel.Name = "lifeLabel";
             this.lifeLabel.Size = new System.Drawing.Size(19, 20);
             this.lifeLabel.TabIndex = 13;
@@ -112,7 +147,7 @@
             this.scoreLabel.AutoSize = true;
             this.scoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.scoreLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.scoreLabel.Location = new System.Drawing.Point(77, 250);
+            this.scoreLabel.Location = new System.Drawing.Point(74, 237);
             this.scoreLabel.Name = "scoreLabel";
             this.scoreLabel.Size = new System.Drawing.Size(19, 20);
             this.scoreLabel.TabIndex = 12;
@@ -122,7 +157,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(27, 284);
+            this.label2.Location = new System.Drawing.Point(26, 268);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 20);
             this.label2.TabIndex = 11;
@@ -132,7 +167,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(10, 250);
+            this.label1.Location = new System.Drawing.Point(9, 237);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 20);
             this.label1.TabIndex = 10;
@@ -154,7 +189,7 @@
             this.DifOfGameGroupBox.Controls.Add(this.easyRadioButton);
             this.DifOfGameGroupBox.Controls.Add(this.mediumRadioButton);
             this.DifOfGameGroupBox.Controls.Add(this.hardRadioButton);
-            this.DifOfGameGroupBox.Location = new System.Drawing.Point(10, 128);
+            this.DifOfGameGroupBox.Location = new System.Drawing.Point(9, 134);
             this.DifOfGameGroupBox.Name = "DifOfGameGroupBox";
             this.DifOfGameGroupBox.Size = new System.Drawing.Size(104, 100);
             this.DifOfGameGroupBox.TabIndex = 7;
@@ -241,7 +276,7 @@
             // startButton
             // 
             this.startButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.startButton.Location = new System.Drawing.Point(10, 317);
+            this.startButton.Location = new System.Drawing.Point(9, 323);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(104, 40);
             this.startButton.TabIndex = 1;
@@ -314,6 +349,9 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button stopButton;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label prizeLabel;
     }
 }
 

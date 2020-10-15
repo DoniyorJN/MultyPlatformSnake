@@ -1,10 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Drawing;
-namespace SnakeWinForm
+﻿using System;
+using System.Collections.Generic;
+namespace Reptile
 {
     public class Map
     {
-
         private readonly int[,] ZeroMap = {
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -82,14 +81,11 @@ namespace SnakeWinForm
             {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1},
             {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1},
             {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1}};
-        public int HeightMap { private set; get; }
-        public int WidthMap { private set; get; }
+        public int HeightMap { private set; get;}
+        public int WidthMap { private set; get;}
 
         private int[,] choosenMap;
         public int[,] CurrentMapBarrier { private set; get; }
-
-        //private Graphics graphics;
-        public readonly int SIZE = 25;
         public Map(int currentMapNumber)
         {
             if (currentMapNumber == 0)
@@ -104,7 +100,7 @@ namespace SnakeWinForm
             {
                 choosenMap = SecondMap;
             }
-            else if (currentMapNumber == 3)
+            else if(currentMapNumber == 3)
             {
                 choosenMap = ThirdMap;
             }
@@ -112,6 +108,7 @@ namespace SnakeWinForm
             WidthMap = choosenMap.GetLength(1);
             List<int> currentMapBarrierX = new List<int>();
             List<int> currentMapBarrierY = new List<int>();
+            Console.Clear();
             for (int x = 0; x < HeightMap; x++)
             {
                 for (int y = 0; y < WidthMap; y++)
@@ -125,7 +122,7 @@ namespace SnakeWinForm
             }
             int length = currentMapBarrierX.Count;
             CurrentMapBarrier = new int[length, 2];
-            for (int i = 0; i < length; i++)
+            for (int i=0; i < length; i++)
             {
                 CurrentMapBarrier[i, 0] = currentMapBarrierY[i];
                 CurrentMapBarrier[i, 1] = currentMapBarrierX[i];
@@ -133,22 +130,25 @@ namespace SnakeWinForm
         }
         public void WriteBoard()
         {
+            Console.Clear();
+            string line;
 
-            //Form1.Self.pictureBox.Image = new Bitmap((int)Form1.Self.pictureBox.Width,(int)Form1.Self.pictureBox.Height);
-            Form1.Self.graphics = Graphics.FromImage(Form1.Self.pictureBox.Image);
-            Form1.Self.graphics.Clear(Color.Gray);
             for (int x = 0; x < HeightMap; x++)
             {
+                line = string.Empty;
                 for (int y = 0; y < WidthMap; y++)
                 {
                     if (choosenMap[x, y] == 1)
                     {
-                        Form1.Self.graphics.FillRectangle(Brushes.Black, y*SIZE, x*SIZE, SIZE, SIZE);
+                        line += "#";
+                    }
+                    else
+                    {
+                        line += " ";
                     }
                 }
-               
+                Console.WriteLine(line);
             }
-            Form1.Self.pictureBox.Refresh();
         }
     }
 }
