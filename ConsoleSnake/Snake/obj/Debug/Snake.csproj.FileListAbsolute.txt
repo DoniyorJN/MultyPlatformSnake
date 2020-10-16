@@ -10,3 +10,9 @@ C:\Users\Zver\source\SavedProject\ConsoleSnake\Snake\obj\Debug\Snake.csprojAssem
 C:\Users\Zver\source\SavedProject\ConsoleSnake\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
 C:\Users\Zver\source\SavedProject\ConsoleSnake\Snake\obj\Debug\Snake.dll
 C:\Users\Zver\source\SavedProject\ConsoleSnake\Snake\obj\Debug\Snake.pdb
+C:\Users\Zver\Desktop\Git\MultyPlatformSnake\ConsoleSnake\Snake\bin\Debug\Snake.dll
+C:\Users\Zver\Desktop\Git\MultyPlatformSnake\ConsoleSnake\Snake\bin\Debug\Snake.pdb
+C:\Users\Zver\Desktop\Git\MultyPlatformSnake\ConsoleSnake\Snake\obj\Debug\Snake.csprojAssemblyReference.cache
+C:\Users\Zver\Desktop\Git\MultyPlatformSnake\ConsoleSnake\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
+C:\Users\Zver\Desktop\Git\MultyPlatformSnake\ConsoleSnake\Snake\obj\Debug\Snake.dll
+C:\Users\Zver\Desktop\Git\MultyPlatformSnake\ConsoleSnake\Snake\obj\Debug\Snake.pdb
