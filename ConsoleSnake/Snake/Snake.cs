@@ -120,7 +120,7 @@ namespace Reptile
             {
                 if ((X[0] == X[i] && Y[0] == Y[i]) && (X[0] != 0 && X[i] != 0 && Y[0] != 0 && Y[i] != 0))
                 {
-                    if (life >= 0) { life--; isAlive = false; }
+                    if (life > 0) { life--; isAlive = false; }
                     else { isGameOver = true; }
                 }
             }
